@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yago | Weboldal Készítés</title>
+
+<link rel="stylesheet" href="yago.css?v=2">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="icon" href="evilpictures/yellowcircle.png" type="image/png">
+
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  
+<div class="lang-switch">
+   <a href="yagoservice-hu.html">
+    <img src="evilpictures/huhu_optimized.png" alt="HU">
+  </a>
+
+  <a href="yagoservice.html">
+    <img src="evilpictures/english_optimized.png" alt="EN">
+  </a>
+
+</div>
+
+      
+  
+      
+<nav class="navbar">
+  <div class="logo">
+    <span><a href="index.html">YAGO</a></span>
+  </div>
+
+  <ul class="nav-links desktop-menu">
+                       <li><a href="csomagok.html">Csomagok</a></li>
+    <li><a href="portfolio-hu.html">Portfólió</a></li>
+    <li><a href="yagoservice-hu.html">GYIK</a></li>
+    <li><a href="https://drive.google.com/file/d/10p5iuE3axz7f0G7Mag1OAk9nEG1gY_fg/view?usp=sharing" target="_blank">Önéletrajz</a></li>
+    <li><a href="hireme-hu.html" class="hire">Kapcsolat</a></li>
+    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+  </ul>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="mobile-menu">
+    <span class="close" onclick="toggleMenu()">✕</span>
+    <ul class="nav-links">
+                         <li><a href="csomagok.html">Csomagok</a></li>
+      <li><a href="portfolio-hu.html">Portfolio</a></li>
+      <li><a href="yagoservice.html">FAQ</a></li>
+      <li>
+        <a href="https://drive.google.com/file/d/1FfE38Dp3_xjVUnNqO9Sjk7j9orYLN7DN/view?usp=sharing" 
+           target="_blank" rel="noopener noreferrer">
+          Resume
+        </a>
+      </li>
+      <li><a href="hireme.html" class="hire">Contact</a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.mobile-menu');
+    const hamburger = document.querySelector('.hamburger');
+    const lang = document.querySelector('.lang-switch'); // <-- EZ A JÓ!
+
+    const isOpen = menu.classList.toggle('show');
+
+    hamburger.style.display = isOpen ? 'none' : 'block';
+
+    if (lang) {
+      lang.style.display = isOpen ? 'none' : 'flex'; // ha eredetileg block volt, akkor 'block'
+    }
+  }
+</script>
+
+
+  
+<section class="faq-section">
+  <div class="faq-header">
+    <span class="faq-label">GYIK</span>
+  </div>
+  
+</div>
+  
+    <div class="faq-item">
+      <button class="faq-question">Milyen szolgáltatásokat nyújtasz? <span class="plus">+</span></button>
+      <div class="faq-answer">
+        <p>Weboldal készítés, márkaépítés és UI fejlesztés egyedi igényekre szabva.</p>
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question">Hogyan indulhat a közös munka? <span class="plus">+</span></button>
+      <div class="faq-answer">
+        <p>Írj üzenetet vagy e-mailt, és megbeszélünk egy rövid egyeztetést!</p>
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question">Mennyi idő egy weboldal elkészítése? <span class="plus">+</span></button>
+      <div class="faq-answer">
+        <p>Általában 2–4 hét a projekt méretétől függően.</p>
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question">Az én költségvetésemhez igazodsz? <span class="plus">+</span></button>
+      <div class="faq-answer">
+        <p>Igen! Több árazási csomagból választhatsz, mindenre találunk megoldást.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <script>
+  const questions = document.querySelectorAll('.faq-question');
+  questions.forEach(q => {
+    q.addEventListener('click', () => {
+      const answer = q.nextElementSibling;
+      const plus = q.querySelector('.plus');
+      const open = answer.style.display === 'block';
+      answer.style.display = open ? 'none' : 'block';
+      plus.textContent = open ? '+' : '−';
+    });
+  });
+  </script>
+  
+  <footer class="site-footer">
+      <header class="main-header">
+        <nav class="nav-bar">
+          <ul class="nav-linked">
+                               <li><a href="csomagok.html">Csomagok</a></li>
+            <li><a href="portfolio-hu.html">Portfólió</a></li>
+            <li><a href="yagoservice-hu.html">GYIK</a></li>
+            <li><a href="https://drive.google.com/file/d/10p5iuE3axz7f0G7Mag1OAk9nEG1gY_fg/view?usp=sharing" target="_blank" rel="noopener noreferrer">Önéletrajz</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1>Alakítsuk valóra az ötleted!</h1>
+          <p>
+            Készítsünk együtt valami igazán különlegeset! Vedd fel velem a kapcsolatot,
+            és megtervezzük a számodra tökéletes weboldalt vagy dizájnt.
+          </p>
+          <a href="hireme-hu.html" class="hire-btn">Vedd fel velem a kapcsolatot!</a>
+        </div>
+      </section>
+      
+      <div class="footer-left">
+        <p>© Minden jog fenntartva</p>
+      </div>
+      </footer>
+      
+  
+  
+  </body>
+  </html>
+  

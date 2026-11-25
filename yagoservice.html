@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yago</title>
+
+<link rel="stylesheet" href="yago.css?v=2">
+
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="icon" href="evilpictures/yellowcircle.png" type="image/png">
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+</style>
+
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+<body>
+
+
+<div class="lang-switch">
+   <a href="yagoservice-hu.html">
+    <img src="evilpictures/huhu_optimized.png" alt="HU">
+  </a>
+
+  <a href="yagoservice.html">
+    <img src="evilpictures/english_optimized.png" alt="EN">
+  </a>
+
+</div>
+
+  <nav class="navbar">
+  <div class="logo">
+    <span><a href="index-en.html">YAGO</a></span>
+  </div>
+
+  <ul class="nav-links desktop-menu">
+    <li><a href="packages.html">Packages</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="yagoservice.html">FAQ</a></li>
+    <li><a href="https://drive.google.com/file/d/1FfE38Dp3_xjVUnNqO9Sjk7j9orYLN7DN/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+    <li><a href="hireme.html" class="hire">Hire Me!</a></li>
+    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+  </ul>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="mobile-menu">
+    <span class="close" onclick="toggleMenu()">✕</span>
+    <ul class="nav-links">
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="yagoservice.html">FAQ</a></li>
+    <li><a href="https://drive.google.com/file/d/1FfE38Dp3_xjVUnNqO9Sjk7j9orYLN7DN/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+      <li><a href="hireme.html" class="hire">Hire Me!</a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.mobile-menu');
+    const hamburger = document.querySelector('.hamburger');
+    const lang = document.querySelector('.lang-switch'); // <-- EZ A JÓ!
+
+    const isOpen = menu.classList.toggle('show');
+
+    hamburger.style.display = isOpen ? 'none' : 'block';
+
+    if (lang) {
+      lang.style.display = isOpen ? 'none' : 'flex'; // ha eredetileg block volt, akkor 'block'
+    }
+  }
+</script>
+
+
+<section class="faq-section">
+  <div class="faq-header">
+    <span class="faq-label">FAQ</span>
+  </div>
+  
+  <div class="faq-header">
+</div>
+
+
+  <div class="faq-item">
+    <button class="faq-question">What services do you offer? <span class="plus">+</span></button>
+    <div class="faq-answer">
+      <p>I offer web design, branding, and interactive UI development tailored to your needs.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How do I start a project with you? <span class="plus">+</span></button>
+    <div class="faq-answer">
+      <p>Just reach out via the contact form or email, and we’ll schedule a discovery call.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How long does a typical project take? <span class="plus">+</span></button>
+    <div class="faq-answer">
+      <p>Most projects take 2–4 weeks depending on scope and feedback cycles.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can you work within my budget? <span class="plus">+</span></button>
+    <div class="faq-answer">
+      <p>Absolutely! I offer flexible packages and always aim to find a solution that fits.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(q => {
+    q.addEventListener('click', () => {
+      const answer = q.nextElementSibling;
+      const plus = q.querySelector('.plus');
+      const isOpen = answer.style.display === 'block';
+
+      answer.style.display = isOpen ? 'none' : 'block';
+      plus.textContent = isOpen ? '+' : '−';
+    });
+  });
+</script>
+
+
+<footer class="site-footer">
+<header class="main-header">
+  <nav class="nav-bar">
+    <ul class="nav-linked">
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="yagoservice.html">FAQ</a></li>
+    <li><a href="https://drive.google.com/file/d/1FfE38Dp3_xjVUnNqO9Sjk7j9orYLN7DN/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Let's transform to reality!</h1>
+    <p>
+      Let's make something incredible together! Reach out to discuss your project, and let's create designs that resonate and inspire.
+    </p>
+    <a href="hireme.html" class="hire-btn">Hire Me!</a>
+  </div>
+</section>
+
+
+
+
+
+
+  <div class="footer-left">
+    <p> © all rights reserved</p>
+  </div>
+</footer>

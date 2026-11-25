@@ -1,0 +1,1842 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+
+
+
+:root{
+    --vilagos:#E4E8EC;
+    --pisas:#A8A69D;
+    --sotet-kek:#2D3E50;
+    --vilagos-kek:#B0C4D9;
+    --fekete:#1C1F24;
+}
+
+body{
+ background: radial-gradient(var(--pisas), transparent 1px);
+ background-size: 12px  12px ;
+ background-color: whitesmoke;
+ margin: 0px;
+}
+
+
+body {
+  margin: 0;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #1C1F24;
+  border-radius: 50px;
+  padding: 15px 20px;
+  margin: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+  background-color: white;
+}
+
+
+
+.logo span {
+  color: black;
+  padding: 8px 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 26px;
+}
+
+.logo span a {
+  text-decoration: none; /* eltünteti az aláhúzást */
+  color: inherit;         /* örökli a span színét */
+}
+
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-linked {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+.hire {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+
+
+/* Instagram ikon (Font Awesome szükséges) */
+.fab.fa-instagram {
+  font-size: 18px;
+}
+
+.nav-links li a:not(.hire){
+  color:black;
+  overflow: hidden;
+}
+
+
+.nav-links li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  color: white;
+  font-size: 20px;
+
+}
+
+
+.nav-linked li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  color: white;
+  font-size: 20px;
+
+}
+
+
+/* Pseudo-element: a háttércsík */
+.nav-links li a:not(.hire)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #FF5580; /* rózsaszín */
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+/* Hover: a háttér jobbról balra kitölt */
+.nav-links li a:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid black;
+  border-radius: 0 0 30px 30px;
+  padding: 20px;
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-menu ul li {
+  margin: 15px 0;
+}
+
+.mobile-menu .hire {
+  background: black;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+}
+
+
+.close {
+  font-size: 28px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+/* Mobil nézet */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+}
+
+
+.mobile-menu.show {
+  display: flex;
+}
+
+/*------kezdooldal---------*/
+
+.intro {
+
+  margin: 60px auto;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 44px;
+}
+
+.status {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #FFCD4B; /* aranysárga */
+  font-weight: bold;
+}
+
+.description {
+  font-size: 18px;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+}
+
+
+
+.hire:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-link {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.portfolio-link:hover {
+  background-color: black;
+  color: white;
+}
+
+.projects {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.projects p {
+  font-size: 18px;
+  margin-bottom: 45px;
+  margin-top: 0px;
+}
+
+
+
+.projects h2 {
+  font-size: 32px;
+  margin-bottom: 60px;
+  background-color: #FFCD4B;
+  font-weight: normal;
+  display: inline-block;
+}
+
+.project-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+.logo-img{
+  width: 110px;
+  margin-bottom: 20px;
+}
+
+.project-box {
+  width: 200px;
+  height: 220px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  color: #3989c9;
+}
+
+.project-box .logo {
+  font-size: 48px;
+  margin-bottom: 10px;
+  
+}
+
+.project-box .label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.see-project {
+  background-color: white;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.see-project:hover {
+  background-color: #eee;
+}
+
+
+
+/* Gomb alul */
+.portfolio-btn {
+  display: inline-block;
+  margin-top: 40px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.portfolio-btn:hover {
+  transform: scale(1.05);
+  color: black;
+  background-color: white;
+      border: 1px solid black;
+
+}
+.project-box {
+  width: 240px;
+  height: 240px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transform: scale(1.1); /* nagyobb méret */
+}
+
+/* Egyedi ferdítések */
+.red {
+  background-color: #43244A;
+  transform: rotate(-5deg) scale(1.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center;
+}
+
+
+.red:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+
+.green {
+  background-color: #570101;
+  transform: rotate(4deg) scale(1.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center;
+}
+
+.green:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.blue {
+  background-color: #004C7E;
+  border: 2px solid ;
+  transform: rotate(-3deg) scale(1.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center;
+}
+
+.blue:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+
+.site-footer {
+  background-color: #000;
+  color: #ccc;
+  padding: 30px 20px;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: 14px;
+    transform: translateX(-50%);
+}
+
+.footer-right {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-btn {
+  background-color: white;
+  color: black;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.footer-btn:hover {
+  background-color: #eee;
+}
+
+.footer-tag {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.footer-tag:hover {
+  background-color: #222;
+}
+
+
+
+
+
+.nav-bar .nav-linked {
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  transform: translate(0px, 0px);
+
+}
+
+.nav-bar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hire-btn {
+  background-color: white;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.hire-btn:hover {
+  transform: scale(1.05);
+}
+
+.corner-nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.footer-center {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ccc;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-left p {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.faq-section {
+  padding: 57px 270px;
+  font-family: 'Poppins', sans-serif;
+      text-align: center;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-label {
+  background-color: #FFCD4B;
+  padding: 6px 12px;
+  font-size: 32px;
+}
+
+.faq-arrow {
+  display: block;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease; 
+}
+
+.faq-item:hover{
+  transform: scale(1.05); /* 5%-kal nagyobb lesz */
+}
+
+.faq-icon {
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
+  margin-left: 25px;
+  transform: scaleX(-1);
+  transform: rotate(150deg);
+}
+
+.faq-question {
+  width: 100%;
+  background-color: #d0e6ff;
+  color: black; /* fekete felirat */
+  border: none;
+  padding: 16px;
+  font-size: 24px;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #1C1F24;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.faq-question .plus {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.faq-answer {
+  display: none;
+  background-color: #f0f8ff;
+  padding: 16px;
+  border-radius: 0 0 8px 8px;
+  margin-top: -10px;
+  color: #333;
+}
+
+.faq-answer.open {
+  max-height: 200px;
+  opacity: 1;
+  padding: 16px;
+  border-color: #d0e6ff; /* világoskék keret */
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 40px 20px;
+  }
+
+  .faq-question {
+    font-size: 20px;
+    padding: 14px;
+  }
+
+  .faq-answer {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .faq-label {
+    font-size: 24px;
+  }
+
+  .faq-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+  }
+
+  .hero-section{
+    margin-right: 0px;
+  }
+
+  .nav-bar .nav-linked{
+    transform: translate(0px, -8px);
+  }
+
+  .lang-switch img {
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.2s ease-in-out;
+  z-index: 10000;
+}
+  
+}
+
+
+.yago-contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Bal oldal: szöveg és elérhetőségek */
+.contact-left-panel {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-details {
+  margin-top: 30px;
+}
+
+.contact-subtitle {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: inline-block;
+
+}
+
+.contact-email {
+  font-size: 15px;
+}
+
+.contact-social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.contact-social-links a {
+  text-decoration: none;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Jobb oldal: űrlap */
+.form-right-box {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-fields label {
+  font-weight: 500;
+}
+
+.form-fields input,
+.form-fields textarea {
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+  background-color: transparent;
+  resize: vertical;
+  font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.form-submit-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%; /* ez teszi olyan szélessé, mint az input mezők */
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  z-index: 1001;
+}
+
+/* --- Mobil nézet --- */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-menu.show {
+    transform: translateX(0);
+  }
+
+  .mobile-menu .close {
+    align-self: flex-end;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .mobile-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+
+  .mobile-menu .hire {
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+}
+
+.lang-switch {
+position: fixed;
+    top: 105px;
+    right: 74px;
+    display: flex;
+    gap: 20px;
+    z-index: 2000;
+}
+
+.lang-switch img {
+  width: 45px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.2s ease-in-out;
+}
+
+.lang-switch img:hover {
+  transform: scale(1.15);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+
+
+  /* Döntés */
+  transform: rotate(-6deg);
+
+  /* Keret */
+  border: 6px solid #ffffff15; /* finom, áttetsző fehér keret */
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.55);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effekt – kicsit kiegyenesedik és erősebb a fény */
+.hero-image:hover {
+  transform: rotate(-3deg) scale(1.03);
+  box-shadow: 0 35px 60px rgba(0, 0, 0, 0.65);
+}
+
+.hero-images{
+    animation: 1.2s ease-out forwards;
+}
+
+.hero-images:hover{
+    transform: rotate(-3deg) scale(1.03);
+}
+
+/* Mobilon kevésbé legyen döntött */
+@media (max-width: 800px) {
+  .hero-image {
+    transform: rotate(-3deg);
+    max-width: 300px;
+  }
+
+
+}
+
+/* 1. Extra nagy mobilok (iPhone 14 Pro Max, 15 Pro Max, 16 Max) */
+@media (max-width: 430px) { 
+  .lang-switch{
+  top: 601px;
+  right: 25px;
+  gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lang-switch{
+        top: 105px;
+        right: 39px;
+        gap: 12px;
+  }
+
+  .lang-switch img {
+    width: 44px;
+  }
+}
+
+/* 2. Nagy modern iPhone-ok (iPhone 12–15, 14 Pro, 15 Pro) */
+@media (max-width: 414px) {
+    .lang-switch{
+        top: 100px;
+        right: 38px;
+        gap: 13px;
+  }
+ }
+
+/* 3. Közepes modern iPhone-ok (iPhone 12/13/14/15 alapmodellek) */
+@media (max-width: 393px) { 
+    .lang-switch{
+  top: 601px;
+  right: 25px;
+  gap: 20px;
+  }
+}
+
+/* 4. Klasszikus mobil breakpoint (iPhone 11, XR, régebbi Androidok) */
+@media (max-width: 390px) {
+    .lang-switch{
+        top: 105px;
+        right: 34px;
+        gap: 15px;
+
+  }
+ }
+
+/* 5. Kis mobilok (iPhone SE, kisebb Androidok) */
+@media (max-width: 375px) {
+    .lang-switch{
+        top: 105px;
+        right: 32px;
+        gap: 14px;
+  }
+ }
+
+/* 6. Extra kicsi kijelzők (régi telefonok) */
+@media (max-width: 360px) { 
+    .lang-switch{
+
+        top: 105px;
+        right: 36px;
+        gap: 12px;
+
+  }
+
+  .lang-switch img
+ {
+        width: 37px;
+ }
+}
+
+
+
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-right: 80px;
+}
+
+@media (max-width: 800px) {
+  .hero-image {
+    margin-right: 0 !important;
+  }
+}
+
+
+.hero-image img {
+  width: 75%;
+  max-width: 260px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+@media (max-width: 800px) {
+  .buttons {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .main-header {
+    display:none;
+  }
+}
+
+/* Animáció definíció */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Mobilbarátság */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+.project-details {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+  color: black;
+}
+
+.project-details h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #3989c9;
+}
+
+.project-details p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.project-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.project-details ul li {
+  margin-bottom: 8px;
+}
+
+.project-details a {
+  color: #3989c9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-details a:hover {
+  text-decoration: underline;
+}
+
+
+.hero-image {
+  margin-top: 20px;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.about-section {
+  padding: 5rem 8vw;;
+  color: #f9fafb;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.about-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  z-index: 1;
+  justify-content: center;
+}
+
+/* FOTO + SZÍNES KERETEK */
+
+.about-photo-wrapper {
+  position: relative;
+  width: 260px;
+  height: 320px;
+}
+
+.about-photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  z-index: 4;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Keretek */
+.about-photo-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  border: 4px solid;
+  z-index: 1;
+}
+
+.border-pink {
+  border-color: #fb7185;   /* pink */
+  transform: translate(-14px, -18px);
+  z-index: 2;
+}
+
+.border-yellow {
+  border-color: #facc15;   /* yellow */
+  transform: translate(10px, 12px);
+  z-index: 1;
+}
+
+.border-blue {
+  border-color: #38bdf8;   /* blue */
+  transform: translate(-8px, 18px);
+  z-index: 0;
+}
+
+/* SZÖVEG BLOKK */
+
+.about-text {
+  max-width: 560px;
+  color: #000; /* fekete szöveg */
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  color: #000; /* fekete cím */
+}
+
+.about-text p {
+  line-height: 1.7;
+  font-size: 0.98rem;
+  color: #000; /* fekete bekezdés */
+  margin-bottom: 1rem;
+}
+
+.about-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+
+  background: #000;      /* fekete háttér */
+  color: #fff;           /* fehér szöveg */
+  border: 2px solid #000;
+
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+
+  transition: 0.25s ease;
+}
+
+/* Hover – fordított színek */
+.about-button:hover {
+  background: #fff;      /* fehér háttér */
+  color: #000;           /* fekete szöveg */
+  border-color: #000;
+}
+
+
+
+/* RESZPONZÍV – TABLET / MOBIL */
+
+@media (max-width: 900px) {
+  .about-inner {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .about-photo-wrapper {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 3.5rem 6vw;
+  }
+
+  .about-inner {
+    gap: 2.5rem;
+  }
+
+  .about-photo-wrapper {
+    width: 220px;
+    height: 270px;
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  line-height: 25px;
+}
+
+.responsive-container-block.bigContainer {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainImg {
+  color: black;
+  width: 55%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px 7px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.yellow-word {
+  color: #FFCD4B;
+}
+
+
+.text-blk.headingText {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 34px;
+  color: black;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+}
+
+.allText {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 40px;
+  width: 40%;
+  margin: 0 0 0 0;
+}
+
+.text-blk.subHeadingText {
+  color: black;
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 700;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+
+.text-blk.description {
+  font-size: 18px;
+  line-height: 34px;
+  color: black;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+}
+
+.explore {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+      transition: background-color 0.2s ease;
+}
+
+.explore:hover{
+  background: #fff;      /* fehér háttér */
+  color: #000;           /* fekete szöveg */
+}
+
+
+
+.responsive-container-block.Container {
+  margin-top: 80px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 1320px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.responsive-container-block.Container.bottomContainer {
+  margin-top: 100px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+  flex-direction: row-reverse;
+  margin: 100px auto 50px auto;
+}
+
+.allText.aboveText {
+  margin: 0 0 0 40px;
+}
+
+.allText.bottomText {
+  margin: 0 40px 0 0;
+}
+
+@media (max-width: 1024px) {
+  .responsive-container-block.Container {
+    max-width: 850px;
+  }
+
+  .mainImg {
+    width: 55%;
+    height: auto;
+  }
+
+  .text-blk.description {
+    font-size: 18px;
+  }
+
+  .allText {
+    width: 40%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+  }
+
+  .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  .text-blk.subHeadingText {
+    font-size: 22px;
+  }
+
+  .responsive-container-block.Container.bottomContainer {
+    margin: 80px auto 50px auto;
+  }
+
+  .responsive-container-block.Container {
+    max-width: 830px;
+  }
+
+  .allText.aboveText {
+    margin: 30px 0 0 40px;
+  }
+
+  .allText.bottomText {
+    margin: 30px 40px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainImg {
+    width: 90%;
+  }
+
+  .allText {
+    width: 100%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .responsive-container-block.Container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-blk.headingText {
+    text-align: center;
+  }
+
+  .text-blk.subHeadingText {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .text-blk.description {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .allText {
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .allText.aboveText {
+    margin: 40px 0 0 0;
+  }
+
+  .responsive-container-block.Container {
+    margin: 80px auto 50px auto;
+  }
+
+  .responsive-container-block.Container.bottomContainer {
+    margin: 50px auto 50px auto;
+  }
+
+  .allText.bottomText {
+    margin: 40px 0 0 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .responsive-container-block.Container {
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mainImg {
+    width: 100%;
+  }
+
+  .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+  }
+
+  .text-blk.subHeadingText {
+    font-size: 22px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .text-blk.description {
+    font-size: 18px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .allText {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    width: 100%;
+  }
+}
+
+
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wk-desk-1 {
+  width: 8.333333%;
+}
+
+.wk-desk-2 {
+  width: 16.666667%;
+}
+
+.wk-desk-3 {
+  width: 25%;
+}
+
+.wk-desk-4 {
+  width: 33.333333%;
+}
+
+.wk-desk-5 {
+  width: 41.666667%;
+}
+
+.wk-desk-6 {
+  width: 50%;
+}
+
+.wk-desk-7 {
+  width: 58.333333%;
+}
+
+.wk-desk-8 {
+  width: 66.666667%;
+}
+
+.wk-desk-9 {
+  width: 75%;
+}
+
+.wk-desk-10 {
+  width: 83.333333%;
+}
+
+.wk-desk-11 {
+  width: 91.666667%;
+}
+
+.wk-desk-12 {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .wk-ipadp-1 {
+    width: 8.333333%;
+  }
+
+  .wk-ipadp-2 {
+    width: 16.666667%;
+  }
+
+  .wk-ipadp-3 {
+    width: 25%;
+  }
+
+  .wk-ipadp-4 {
+    width: 33.333333%;
+  }
+
+  .wk-ipadp-5 {
+    width: 41.666667%;
+  }
+
+  .wk-ipadp-6 {
+    width: 50%;
+  }
+
+  .wk-ipadp-7 {
+    width: 58.333333%;
+  }
+
+  .wk-ipadp-8 {
+    width: 66.666667%;
+  }
+
+  .wk-ipadp-9 {
+    width: 75%;
+  }
+
+  .wk-ipadp-10 {
+    width: 83.333333%;
+  }
+
+  .wk-ipadp-11 {
+    width: 91.666667%;
+  }
+
+  .wk-ipadp-12 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wk-tab-1 {
+    width: 8.333333%;
+  }
+
+  .wk-tab-2 {
+    width: 16.666667%;
+  }
+
+  .wk-tab-3 {
+    width: 25%;
+  }
+
+  .wk-tab-4 {
+    width: 33.333333%;
+  }
+
+  .wk-tab-5 {
+    width: 41.666667%;
+  }
+
+  .wk-tab-6 {
+    width: 50%;
+  }
+
+  .wk-tab-7 {
+    width: 58.333333%;
+  }
+
+  .wk-tab-8 {
+    width: 66.666667%;
+  }
+
+  .wk-tab-9 {
+    width: 75%;
+  }
+
+  .wk-tab-10 {
+    width: 83.333333%;
+  }
+
+  .wk-tab-11 {
+    width: 91.666667%;
+  }
+
+  .wk-tab-12 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .wk-mobile-1 {
+    width: 8.333333%;
+  }
+
+  .wk-mobile-2 {
+    width: 16.666667%;
+  }
+
+  .wk-mobile-3 {
+    width: 25%;
+  }
+
+  .wk-mobile-4 {
+    width: 33.333333%;
+  }
+
+  .wk-mobile-5 {
+    width: 41.666667%;
+  }
+
+  .wk-mobile-6 {
+    width: 50%;
+  }
+
+  .wk-mobile-7 {
+    width: 58.333333%;
+  }
+
+  .wk-mobile-8 {
+    width: 66.666667%;
+  }
+
+  .wk-mobile-9 {
+    width: 75%;
+  }
+
+  .wk-mobile-10 {
+    width: 83.333333%;
+  }
+
+  .wk-mobile-11 {
+    width: 91.666667%;
+  }
+
+  .wk-mobile-12 {
+    width: 100%;
+  }
+}
+
+/* Alap: a zászló látszik */
+.language-switcher {
+  transition: opacity 0.3s ease;
+}
+
+/* Ha a mobilmenü nyitva van, tűnjön el */
+.mobile-menu.show ~ .language-switcher {
+  opacity: 0;
+  pointer-events: none;
+}
+

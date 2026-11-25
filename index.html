@@ -1,0 +1,830 @@
+<<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weboldal készítés kisvállalkozásoknak – Yago webdesigner</title>
+    <link rel="icon" href="evilpictures/yellowcircle.png" type="image/png">
+
+    <meta name="google-site-verification" content="OwM1qC-heEJeks5my_AhjKpfKuBLiiW7rXAyKDsYfIs" />
+    <link rel="stylesheet" href="yago.css?v=2">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Weboldalt szeretne, amely valóban hozza az ügyfeleket? Megbeszéljük az igényeit, megtervezzük, elkészítjük — és a kész oldal után sem marad egyedül. Modern weboldalak magyar kisvállalkozásoknak. Kérjen ingyenes konzultációt!">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "YAGO webfejlesztő",
+      "url": "https://yagoweb.hu",
+      "description": "Mobilbarát, reszponzív weboldal készítés kisvállalkozásoknak. Modern design, gyors betöltés, átlátható felépítés.",
+      "publisher": {
+        "@type": "Person",
+        "name": "Yago",
+        "jobTitle": "Webfejlesztő",
+        "url": "https://yagoweb.hu",
+        "sameAs": [
+          "https://www.linkedin.com/in/yago-coder-2388453a1"
+        ]
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yagoweb.hu/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .visually-hidden {
+        position: absolute;
+        left: -9999px;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+      }
+
+      .modal-content {
+        background: #0b1020;
+        padding: 24px;
+        border-radius: 16px;
+        width: 90%;
+        max-width: 600px;
+        color: #fff;
+        position: relative;
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .modal-image-wrapper {
+        border: 2px solid #3b82f6;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 16px;
+      }
+
+      .modal-image-wrapper img {
+        width: 100%;
+        display: block;
+      }
+
+      .modal-link-btn {
+        display: inline-block;
+        padding: 10px 18px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .bigContainer,
+      .Container,
+      .allText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .explore {
+        margin-top: 20px;
+        display: inline-block;
+      }
+    </style>
+</head>
+
+<body>
+
+<h1 class="visually-hidden">Weboldal készítés kisvállalkozásoknak – Yago webdesigner</h1>
+
+<div class="lang-switch">
+  <a href="index.html">
+    <img src="evilpictures/huhu_optimized.png" alt="HU">
+  </a>
+  <a href="index-en.html">
+    <img src="evilpictures/english_optimized.png" alt="EN">
+  </a>
+</div>
+
+<nav class="navbar">
+  <div class="logo">
+    <span><a href="index.html">YAGO</a></span>
+  </div>
+
+  <ul class="nav-links desktop-menu">
+    <li><a href="csomagok.html">Csomagok</a></li>
+    <li><a href="portfolio-hu.html">Portfólió</a></li>
+    <li><a href="yagoservice-hu.html">GYIK</a></li>
+    <li><a href="https://drive.google.com/file/d/10p5iuE3axz7f0G7Mag1OAk9nEG1gY_fg/view?usp=sharing" target="_blank">Önéletrajz</a></li>
+    <li><a href="hireme-hu.html" class="hire">Kapcsolat</a></li>
+    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+  </ul>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="mobile-menu">
+    <span class="close" onclick="toggleMenu()">✕</span>
+    <ul class="nav-links">
+      <li><a href="csomagok.html">Csomagok</a></li>
+      <li><a href="portfolio-hu.html">Portfólió</a></li>
+      <li><a href="yagoservice-hu.html">GYIK</a></li>
+      <li><a href="https://drive.google.com/file/d/10p5iuE3axz7f0G7Mag1OAk9nEG1gY_fg/view?usp=sharing" target="_blank" rel="noopener noreferrer">Önéletrajz</a></li>
+      <li><a href="hireme-hu.html" class="hire">Kapcsolat</a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.mobile-menu');
+    const hamburger = document.querySelector('.hamburger');
+    const lang = document.querySelector('.lang-switch');
+
+    const isOpen = menu.classList.toggle('show');
+    hamburger.style.display = isOpen ? 'none' : 'block';
+
+    if (lang) {
+      lang.style.display = isOpen ? 'none' : 'flex';
+    }
+  }
+</script>
+
+
+<!-- ===================== HERO ===================== -->
+<section class="intro hero">
+  <div class="hero-text">
+    <p class="status">Weboldal készítés kisvállalkozásoknak</p>
+
+    <h1>
+      Az Ön vállalkozása megérdemel egy weboldalt,
+      <span class="highlight">amely tényleg dolgozik Önért</span> —
+      nem csak jól néz ki.
+    </h1>
+
+    <p class="description">
+      Sokan csak egy "szép oldalt" kapnak. Én olyat készítek,
+      amely bizalmat épít, meggyőz — és arra ösztönzi a látogatót,
+      hogy felvegye Önnel a kapcsolatot.
+    </p>
+
+    <div class="buttons">
+      <a href="hireme-hu.html" class="hire">Ingyenes konzultáció</a>
+      <a href="portfolio-hu.html" class="portfolio-link">Referenciák megtekintése</a>
+    </div>
+  </div>
+
+  <img src="evilpictures/tria.png" alt="Modern webdesign elemek" class="hero-images">
+</section>
+
+
+
+
+<!-- ===================== POPUP MODAL ===================== -->
+<div class="yago-modal" id="projectModal">
+  <div class="yago-modal-box">
+    <span class="yago-close">&times;</span>
+    <div class="yago-img-wrap">
+      <img id="modal-img" src="" alt="">
+    </div>
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <a id="modal-link" href="#" target="_blank">Weboldal megnyitása</a>
+  </div>
+</div>
+
+<style>
+  .yago-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .yago-modal-box {
+    background: #004C7E;
+    width: 360px;
+    border-radius: 16px;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    text-align: center;
+  }
+
+  .yago-close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.2s;
+  }
+
+  .yago-close:hover {
+    transform: scale(1.2);
+  }
+
+  .yago-img-wrap {
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .yago-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #modal-link {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #modal-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.15);
+    transform: skewX(-20deg);
+    transition: left 0.4s ease;
+  }
+
+  #modal-link:hover::after {
+    left: 100%;
+  }
+
+  #modal-link:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+<script>
+  const modal = document.getElementById('projectModal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalLink = document.getElementById('modal-link');
+  const closeBtn = document.querySelector('.yago-close');
+
+  document.querySelectorAll('.see-project').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      if (btn.dataset.link && btn.dataset.link !== "#") {
+        return;
+      }
+      e.preventDefault();
+
+      modalImg.src = btn.dataset.img;
+      modalTitle.textContent = btn.dataset.title;
+      modalDesc.textContent = btn.dataset.desc;
+      modalLink.href = btn.dataset.link;
+
+      const color = btn.dataset.color;
+      document.querySelector('.yago-modal-box').style.background = color;
+      document.querySelector('.yago-img-wrap').style.background = color;
+
+      modal.style.display = 'flex';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+
+
+<section class="projects"> 
+  <h2>Projektek</h2>
+  <div class="project-grid">
+
+    <!-- KÉK PROJEKT -->
+    <div class="project-box blue"> 
+      <img src="evilpictures/eb_optimized_optimized.png" alt="Ebklinika projekt logó" class="logo-img"> 
+      <p class="label">Ebklinika weboldal</p>
+      <a href="#" 
+         class="see-project"
+         data-title="Ebklinika weboldal"
+         data-desc="Modern állatorvosi rendelő weboldala, reszponzív kialakítással."
+         data-img="evilpictures/eb_optimized_optimized.png"
+         data-link="https://ebklinika.hu"
+         data-color="#004C7E">
+        Weboldal megnéz
+      </a>
+    </div>
+
+    <!-- ZÖLD PROJEKT -->
+    <div class="project-box green"> 
+      <img src="evilpictures/blueprint.png" alt="Fejlesztés alatt álló projekt helyőrző" class="logo-img">
+      <p class="label">BRUTAL ARCH</p>
+      <a href="arkitekt.html" 
+         class="see-project"
+         data-title="Fejlesztés alatt"
+         data-desc="Ez a projekt jelenleg fejlesztés alatt áll."
+         data-img="evilpictures/placeholder.png"
+         data-link="arkitekt.html"
+         data-color="#570101">
+        Weboldal megnéz
+      </a>
+    </div>
+
+    <!-- PIROS PROJEKT -->
+    <div class="project-box red">
+      <img src="evilpictures/burger.png" alt="Burger Site logó" class="logo-img">
+      <p class="label">Burger Site</p> 
+      <a href="burgersite.html" 
+         class="see-project"
+         data-title="Fejlesztés alatt"
+         data-desc="Ez a projekt jelenleg fejlesztés alatt áll."
+         data-img="evilpictures/placeholder.png"
+         data-link="burgersite.html"
+         data-color="#43244A">
+        Weboldal megnéz
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- POPUP -->
+<div class="yago-modal" id="projectModal">
+  <div class="yago-modal-box">
+    <span class="yago-close">&times;</span>
+
+    <div class="yago-img-wrap">
+      <img id="modal-img" src="" alt="">
+    </div>
+
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+
+    <a id="modal-link" href="#" target="_blank">Weboldal megnyitása</a>
+  </div>
+</div>
+
+
+<style>
+  /* OVERLAY */
+.yago-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* POPUP DOBOZ */
+.yago-modal-box {
+  background: #004C7E;
+  width: 360px;
+  border-radius: 16px;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  text-align: center;
+}
+
+/* X GOMB */
+.yago-close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.yago-close:hover {
+  transform: scale(1.2);
+}
+
+/* KÉP */
+.yago-img-wrap {
+  width: 100%;
+  height: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.yago-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* GOMB */
+#modal-link {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #ffffff;        /* FEHÉR háttér */
+  color: black;             /* SZÜRKE szöveg */
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* FÉNYCSÍK */
+#modal-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.15);   /* SZÜRKE fénycsík */
+  transform: skewX(-20deg);
+  transition: left 0.4s ease;
+}
+
+/* HOVER – fénycsík átfut */
+#modal-link:hover::after {
+  left: 100%;
+}
+
+/* HOVER – enyhe nagyítás */
+#modal-link:hover {
+  transform: scale(1.05);
+}
+
+</style>
+
+<!-- ===================== FOLYAMAT ===================== -->
+<section class="process-section">
+  <h2>Így működik a közös munka</h2>
+  <p class="process-subtitle">Nincs bonyolult folyamat. Csak öt egyszerű lépés — az első kapcsolatfelvételtől a kész weboldalig.</p>
+
+  <div class="process-steps">
+
+    <div class="process-step">
+      <span class="step-number">01</span>
+      <h3>Kapcsolatfelvétel</h3>
+      <p>Írjon üzenetet vagy hívjon fel. Nem kell semmi előkészület — csak mesélje el, mivel foglalkozik és nagyjából mire gondolt.</p>
+    </div>
+
+    <div class="process-step">
+      <span class="step-number">02</span>
+      <h3>Ingyenes egyeztetés</h3>
+      <p>Rövid, kötelezettségmentes beszélgetés, ahol megértem az Ön vállalkozását, céljait és azt, kinek szól majd az oldal. Ez alapján készül az ajánlat.</p>
+    </div>
+
+    <div class="process-step">
+      <span class="step-number">03</span>
+      <h3>Tervezés és fejlesztés</h3>
+      <p>Megtervezem az oldal felépítését, kinézetét és tartalmát — az Ön visszajelzései alapján csiszoljuk tökéletesre. Semmi nem lesz meglepetés.</p>
+    </div>
+
+    <div class="process-step">
+      <span class="step-number">04</span>
+      <h3>Átadás és indítás</h3>
+      <p>Amikor mindketten elégedettek vagyunk az eredménnyel, az oldal élesbe megy. Megmutatom hogyan működik, és válaszolok minden kérdésére.</p>
+    </div>
+
+    <div class="process-step">
+      <span class="step-number">05</span>
+      <h3>Karbantartás és támogatás</h3>
+      <p>Az átadás után sem marad egyedül. Havonta ellenőrzöm az oldalt — hogy minden rendben működjön, gyors maradjon, és Ön a vállalkozásával foglalkozhasson.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== KÖZÉPSŐ MEGGYŐZŐ ===================== -->
+<div class="responsive-container-block bigContainer">
+  <div class="responsive-container-block Container">
+    <div class="allText aboveText">
+
+      <p class="text-blk headingText">
+        Minden nap vannak emberek, akik az Önéhez hasonló szolgáltatást keresnek. A kérdés csak az: megtalálják-e Önt?
+      </p>
+
+      <p class="text-blk description">
+        Egy elavult vagy lassú weboldal nem semleges dolog —
+        aktívan löki el az érdeklődőket. Az első benyomás másodpercek alatt kialakul,
+        és ha az oldal nem meggyőző, a látogató továbblép a következőre.
+        <br><br>
+        Olyan weboldalt készítek, amely:
+        <br>✔ azonnal bizalmat kelt az első látogatónál
+        <br>✔ világosan megmutatja, miért Önt válasszák
+        <br>✔ mobilon ugyanolyan jól működik, mint számítógépen
+        <br>✔ és a kész átadás után is gondoskodva marad
+      </p>
+
+      <a href="hireme-hu.html" class="explore">Kérjen ingyenes konzultációt</a>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  /* =====================================================
+   YAGO — Folyamat szekció CSS
+   Illeszkedik a meglévő sötét témához (Poppins, #3b82f6, #8b5cf6)
+   Másold be a yago.css végére!
+   ===================================================== */
+
+/* ---- SZEKCIÓ ALAP ---- */
+.process-section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.process-section h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.process-subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  max-width: 560px;
+  margin: 0 auto 60px auto;
+  line-height: 1.7;
+}
+
+/* ---- LÉPÉSEK RÁCS ---- */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+/* Az 5. lépés középre kerül az alsó sorban */
+.process-steps .process-step:nth-child(4) {
+  grid-column: 1;
+}
+
+.process-steps .process-step:nth-child(5) {
+  grid-column: 2;
+}
+
+/* ---- EGY LÉPÉS KÁRTYA ---- */
+.process-step {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.4);
+  background: rgba(59, 130, 246, 0.06);
+}
+
+/* ---- SZÁM ---- */
+.step-number {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 20px;
+}
+
+/* ---- LÉPÉS CÍM ---- */
+.process-step h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+/* ---- LÉPÉS SZÖVEG ---- */
+.process-step p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---- ÖSSZEKÖTŐ VONAL (opcionális, szép részlet) ---- */
+.process-step::after {
+  content: "→";
+  position: absolute;
+  top: 38px;
+  right: -18px;
+  font-size: 1.1rem;
+  color: rgba(59, 130, 246, 0.35);
+  z-index: 1;
+}
+
+/* Az utolsó oszlopban lévő kártyáknak ne legyen nyíl */
+.process-step:nth-child(3)::after,
+.process-step:nth-child(5)::after {
+  display: none;
+}
+
+/* A 4. kártyának (első az alsó sorban) is legyen nyíl */
+.process-step:nth-child(4)::after {
+  display: block;
+}
+
+/* ---- RESZPONZÍV ---- */
+@media (max-width: 900px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-steps .process-step:nth-child(4),
+  .process-steps .process-step:nth-child(5) {
+    grid-column: auto;
+  }
+
+  /* 2 oszlopnál a páros kártyáknak nincs nyíl */
+  .process-step:nth-child(2)::after,
+  .process-step:nth-child(4)::after {
+    display: none;
+  }
+
+  .process-step:nth-child(3)::after,
+  .process-step:nth-child(5)::after {
+    display: none;
+  }
+
+  .process-step:nth-child(1)::after,
+  .process-step:nth-child(3)::after {
+    display: block;
+  }
+}
+
+@media (max-width: 580px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step::after {
+    display: none !important;
+  }
+
+  .process-section {
+    padding: 60px 16px;
+  }
+
+  .process-step {
+    padding: 24px 20px;
+  }
+}
+</style>
+
+
+<!-- ===================== GYIK ===================== -->
+<section class="faq-section">
+  <div class="faq-header">
+    <span class="faq-label">GYIK</span>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Milyen típusú weboldalakat készít? <span class="plus">+</span></button>
+    <div class="faq-answer">
+      <p>Bemutatkozó oldalakat, landing page-eket és kisebb vállalati weboldalakat — minden esetben az Ön vállalkozásának céljára és közönségére szabva. Nem sablont adok, hanem olyat ami ténylegesen működik az Ön piacán.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Mi történik az átadás után? <span class="plus">+</span></button>
+    <div class="faq-answer">
+      <p>Nem tűnök el. Havonta ellenőrzöm az oldalt, hogy minden rendben fusson. Ha kérdése van vagy valamit módosítani szeretne, elérhető vagyok — nem kell egyedül megküzdenie a technikai dolgokkal.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Mennyi idő alatt készül el a weboldal? <span class="plus">+</span></button>
+    <div class="faq-answer">
+      <p>Általában 2–4 hét, a projekt összetettségétől függően. Az elején pontosan megbeszéljük az ütemtervet — hogy tudja, mikor és mit várhat.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Az én költségvetésemhez is tud igazodni? <span class="plus">+</span></button>
+    <div class="faq-answer">
+      <p>Igen. Több csomag közül lehet választani különböző igényekhez. Ha egyik sem illik pontosan, egyedi ajánlatot is készítek — mert minden vállalkozás más, és minden büdzsét komolyan veszek.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Miért bízzak meg egy webfejlesztőben, akit nem ismerek? <span class="plus">+</span></button>
+    <div class="faq-answer">
+      <p>Teljesen érthető kérdés. Ezért az első egyeztetés ingyenes és kötelezettségmentes — ismerjen meg, tegye fel a kérdéseit, és csak akkor döntsön, ha meggyőződött róla.</p>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  const questions = document.querySelectorAll('.faq-question');
+  questions.forEach(q => {
+    q.addEventListener('click', () => {
+      const answer = q.nextElementSibling;
+      const plus = q.querySelector('.plus');
+      const open = answer.style.display === 'block';
+      answer.style.display = open ? 'none' : 'block';
+      plus.textContent = open ? '+' : '−';
+    });
+  });
+</script>
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <header class="main-header">
+    <nav class="nav-bar">
+      <ul class="nav-linked">
+        <li><a href="csomagok.html">Csomagok</a></li>
+        <li><a href="portfolio-hu.html">Portfólió</a></li>
+        <li><a href="yagoservice-hu.html">GYIK</a></li>
+        <li><a href="https://drive.google.com/file/d/10p5iuE3axz7f0G7Mag1OAk9nEG1gY_fg/view?usp=sharing" target="_blank" rel="noopener noreferrer">Önéletrajz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Készen áll, hogy weboldala végre Önért dolgozzon?</h1>
+      <p>
+        Az első lépés egyszerű — és teljesen ingyenes.
+        Írjon vagy hívjon fel, és megbeszéljük, mire van szüksége.
+        Kötelezettség nélkül.
+      </p>
+      <a href="hireme-hu.html" class="hire-btn">Vegye fel velem a kapcsolatot!</a>
+    </div>
+  </section>
+
+  <div class="footer-left">
+    <p>© Minden jog fenntartva — YAGO</p>
+  </div>
+</footer>
+
+</body>
+</html>
